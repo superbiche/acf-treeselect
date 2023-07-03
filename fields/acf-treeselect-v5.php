@@ -216,6 +216,10 @@ if ( ! class_exists( 'acf_field_treeselect' ) ) :
 					break;
 
 				case 'array':
+				  $value = [
+		                    "levels" => $levels,
+		                    "value" => $value,
+		                  ];
 				default:
 					break;
 			}
