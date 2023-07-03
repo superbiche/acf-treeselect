@@ -195,7 +195,7 @@ if ( ! class_exists( 'acf_field_treeselect' ) ) :
 					'label' => $choices[ $value['value'] ]['label'],
 				);
 				$choices  = $choices[ $value['value'] ]['children'];
-				$value    = $value[ $value['value'] ];
+				$value    = isset($value[ $value['value'] ]) ? $value[ $value['value'] ] : $value['value'];
 			}
 
 			switch ( $field['return_format'] ) {
